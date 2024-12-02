@@ -1,0 +1,18 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environments
+venv/
+.env/
+.venv/
+
+# Ignore IDE/editor config files
+.vscode/
+.idea/
+
+# Ignore Git files and directories
+.git/
+.gitignore
+.gitattributes

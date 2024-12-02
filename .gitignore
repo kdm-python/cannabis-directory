@@ -1,0 +1,23 @@
+# Virtual environment folder
+.venv/
+
+# Cache files
+.pytest_cache/
+__pycache__/
+
+# Poetry lock file (keep if you want to commit dependencies to version control)
+poetry.lock
+
+# Byte-compiled / optimized / compiled Python files
+*.py[cod]
+*.pyo
+*.pyd
+
+# Log files
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS system files
+.DS_Store
