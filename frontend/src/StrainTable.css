@@ -1,0 +1,52 @@
+/* StrainTable.css */
+
+/* Styling for the container */
+#strain-table {
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the Tabulator table inside the #strain-table container */
+#strain-table .tabulator {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+#strain-table .tabulator .tabulator-header {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+/* Cell styling */
+#strain-table .tabulator td,
+#strain-table .tabulator th {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Zebra striping for rows */
+#strain-table .tabulator tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect on rows */
+#strain-table .tabulator tr:hover {
+  background-color: #ddd;
+}
+
+/* Styling for the footer */
+#strain-table .tabulator .tabulator-footer {
+  background-color: #f1f1f1;
+  text-align: right;
+  padding: 10px;
+}
+
