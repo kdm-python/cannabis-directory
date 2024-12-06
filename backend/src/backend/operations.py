@@ -8,7 +8,7 @@ from loguru import logger
 from pathlib import Path
 from functools import lru_cache
 
-DATA_PATH = Path("src/data/strains_cleaned.csv")
+DATA_PATH = Path("data/strains_cleaned.csv")
 
 
 @lru_cache(maxsize=1)
@@ -27,7 +27,7 @@ def get_data(limit: Optional[int] = None, path: Path = DATA_PATH) -> list[dict]:
 
 
 def search_strains(
-    data: list[dict], search_term: str, category: str = "Name", limit: int | None = 10
+    data: list[dict], search_term: str, category: str = "Name", limit: int = 10
 ) -> list[dict]:
     """Perform a case insensitive text search on the provided strain data."""
     # TODO: Handle error if non-string value found
@@ -38,6 +38,7 @@ def search_strains(
         if search_term_lower
         in strain[category].lower()  # Compare lowercase versions of both strings
     ]
+
     return results[:limit] if limit else results
 
 

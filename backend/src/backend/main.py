@@ -36,10 +36,10 @@ def get_all_data():
 
 
 @app.get("/strains/search/{search_term}")
-def search_data(search_term: str):
+def search_data(search_term: str, limit: int = 10):
     data = get_data()
-    results = search_strains(data=data, search_term=search_term)
-    return {"message": "Search TBD"}
+    results = search_strains(data=data, search_term=search_term, limit=limit)
+    return {"results": results}
 
 
 @app.get("/strains/pagination")

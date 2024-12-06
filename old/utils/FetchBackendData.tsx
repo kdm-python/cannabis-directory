@@ -21,7 +21,7 @@ const FetchStrains = (
         console.log("Response data:", response.data);
         
         const strainsData = response.data || [];
-        setStrains(strainsData.data.slice(0, 10));
+        setStrains(strainsData.data.slice(0, 30));
 
       } catch (error) {
         console.error("Error fetching data:", error);
