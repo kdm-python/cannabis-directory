@@ -23,7 +23,7 @@ def welcome():
 @app.get("/strains/")
 def get_all_data():
     """
-    TODO: Query parameters: category, search_term, limit
+    TODO: Query parameters: category, search_term, limit, etc all in this endpoint
     """
     try:
         data = get_data()
@@ -35,10 +35,10 @@ def get_all_data():
         return data
 
 
-@app.get("/strains/search/{search_term}")
-def search_data(search_term: str, limit: int = 10):
+@app.get("/strains/search/")
+def search_data(target: str, category: str = "Name", limit: int = 10):
     data = get_data()
-    results = search_strains(data=data, search_term=search_term, limit=limit)
+    results = search_strains(data=data, search_term=target, category=category, limit=limit)
     return {"results": results}
 
 

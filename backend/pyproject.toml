@@ -19,6 +19,7 @@ ptpython = "^3.0.29"
 black = "^24.10.0"
 fastapi-middleware = "^0.2.1"
 uvicorn = "^0.32.1"
+pymongo = "^4.10.1"
 
 
 [build-system]
